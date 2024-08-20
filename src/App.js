@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import CardAtleta from "./componentes/CardAtleta";
-import PainelFavoritos from "./componentes/PainelFavoritos";
+import CardAtleta from "./components/CardAtleta";
+import PainelFavoritos from "./components/PainelFavoritos";
 import { Container, Form, Button, Row } from "react-bootstrap";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
       );
       setAtletas(response.data.response);
     } catch (error) {
-      console.error("Erro ao buscar atletas:", error);
+      console.error("Erro ao buscar pilotos:", error);
     }
   };
 
@@ -34,12 +34,12 @@ function App() {
 
   return (
     <Container>
-      <h1 className="my-4">Pesquisa de Atletas</h1>
+      <h1 className="my-4">Pesquisa de Pilotos</h1>
       <Form>
         <Form.Group controlId="formSearch">
           <Form.Control
             type="text"
-            placeholder="Digite o nome do atleta"
+            placeholder="Digite o nome do piloto"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
