@@ -35,8 +35,8 @@ function App() {
   return (
     <Container>
       <h1 className="my-4">Pesquisa de Pilotos</h1>
-      <Form>
-        <Form.Group controlId="formSearch">
+      <Form className="d-flex mb-4">
+        <Form.Group controlId="formSearch" className="me-2 flex-grow-1">
           <Form.Control
             type="text"
             placeholder="Digite o nome do piloto"
